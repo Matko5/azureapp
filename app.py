@@ -20,9 +20,8 @@ def task():
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     container_client = blob_service_client.get_container_client(container_name)
     file_name = 'e0bb9606f50adcc4b5ca3071f310aa9e.pdf'
-    blob_client = container_client.get_blob_client(file_name)
-    stream_downloader = blob_client.download_blob()
-    file = BytesIO()
-    stream_downloader.download_to_stream(file)
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-    return ROOT_DIR + ' 1 ' + str(file)
+    with open(file=ROOT_DIR + '/e0bb9606f50adcc4b5ca3071f310aa9e.pdf', mode="wb") as download_file:
+        download_file.write(container_client.download_blob(file_name).readall())
+    dir_list = os.listdir(ROOT_DIR)
+    return ROOT_DIR + ' 1 ' + str(dir_list)
