@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Tensorboard
+model_stats/
+
+# PEP 582
+__pypackages__/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Environments
+.e/
+.env*
+!.env.example
+env/
+venv/
+google.json
+
+# IDE settings
+.idea/
+.spyderproject
+.spyproject
+
+# Data directories
+/app/trained_models/
+!/app/trained_models/.keep
+
+/app/data/
+!/app/data/.keep
+
+/app/utils/data/
+
+# Flask stuff
+.DS_Store
+.flaskenv
+.webassets-cache
+instance/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.pycover
+.hypothesis/
+.pytest_cache/
+cover/
+
+#NN weights and data
+scripts/automatic_extraction_GCN/weights
+scripts/automatic_extraction_GCN/data
+/scripts/base64_sender_dataset.py
+/scripts/base64_sender_dataset_xenia.py
