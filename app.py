@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 import os
 from io import BytesIO
-from azure.storage.blob import BlobServiceClient
 
 app = Flask(__name__)
 
